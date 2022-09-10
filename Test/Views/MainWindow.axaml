@@ -1,0 +1,75 @@
+<Window xmlns="https://github.com/avaloniaui"
+		
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Test.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:uc="clr-namespace:Test.MyControls"
+		
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="768"
+        x:Class="Test.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Test"
+		SizeToContent="Width">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Window.Styles>
+		<StyleInclude Source = "avares://Test/MyControls/MyCustomButton.axaml" />
+		<StyleInclude Source = "avares://Test/MyControls/MyToggleButton.axaml" />
+		<StyleInclude Source = "avares://Test/MyControls/MyCheckButton.axaml" />
+		<StyleInclude Source = "avares://Test/MyControls/MyRadioButton.axaml" />
+		<StyleInclude Source="avares://Test/MyControls/PanelWithButtons.axaml"/>
+		<StyleInclude Source="avares://Test/MyControls/ClickPanel.axaml"/>
+		
+	</Window.Styles>
+		
+
+	<Grid ColumnDefinitions="auto,auto" RowDefinitions="auto,auto,auto" VerticalAlignment="Bottom">
+	<StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
+	<Border BorderBrush="Gray" HorizontalAlignment="Stretch">
+		<Border BorderBrush="Gray" BorderThickness="1">
+			<Image Stretch="Fill" Width="128" Height="70" Source="/Assets/logo_stankin_2017.jpg" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+		</Border>
+	</Border>
+		
+	</StackPanel>
+		<!--ДАТА И ВРЕМЯ-->
+		<StackPanel Grid.Column="1" Grid.Row="0">
+			<Border BorderBrush="Gray" BorderThickness="2" HorizontalAlignment="Right" Width="100">
+			<Label Name="LiveDateLabel"
+				  Content="DATE"
+				  HorizontalAlignment="Center"
+				  VerticalAlignment="Top"
+			  
+				  FontWeight="Bold"
+				  Foreground="Black" />
+			</Border>
+			<Border BorderBrush="Gray" BorderThickness="2" HorizontalAlignment="Right" Width="100">
+				   <Label Name="LiveTimeLabel"
+			   Content="TIME"
+			   HorizontalAlignment="Center"
+			   VerticalAlignment="Top"
+			  
+			   FontWeight="Bold" 
+			   Foreground="Black" />
+			</Border>
+	</StackPanel>
+		<StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+			<Border BorderBrush="Gray" HorizontalAlignment="Center">
+				<Image Stretch="Fill" Width="768" Height="578" Source="/Assets/Back.jpg" VerticalAlignment="Center"></Image>
+			</Border>
+		</StackPanel>
+	<uc:PanelWithButtons Grid.Column="1" Grid.Row="1" Orientation="Vertical"></uc:PanelWithButtons>
+		
+		
+	</Grid>
+	
+	
+	
+        
+	
+			
+</Window>

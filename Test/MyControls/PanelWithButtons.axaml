@@ -1,0 +1,27 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:uc="clr-namespace:Test.MyControls"
+        xmlns:controls="using:Test.MyControls">
+  <Design.PreviewWith>
+    <controls:PanelWithButtons />
+  </Design.PreviewWith>
+          <StyleInclude Source = "avares://Test/MyControls/MyCustomButton.axaml" />
+		  <StyleInclude Source = "avares://Test/MyControls/MyToggleButton.axaml" />
+		  <StyleInclude Source = "avares://Test/MyControls/MyCheckButton.axaml" />
+		  <StyleInclude Source = "avares://Test/MyControls/MyRadioButton.axaml" />
+	
+  <Style Selector="controls|PanelWithButtons">
+    <!-- Set Defaults -->
+	  <Setter Property="Template">
+		  <ControlTemplate>
+			  
+			  <StackPanel Grid.Column="0" Grid.Row="1" Orientation="{TemplateBinding Orientation}" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+			
+			</StackPanel>
+			  
+			  </ControlTemplate>
+		 
+	  </Setter>
+		  
+  </Style>
+</Styles>
