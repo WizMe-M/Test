@@ -1,22 +1,22 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
 using Avalonia.Interactivity;
-using System;
-using System.Drawing;
+using Brushes = Avalonia.Media.Brushes;
 
 namespace Test.MyControls
 {
     public class ClickPanel : Button
     {
-        Button btn1;
-        
-        private void OnButtonClick(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Обработчик нажатия на кнопки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnButtonClick(object sender)
         {
-            btn1 = this.FindControl<Button>("btn1");
-            btn1.Background = (Avalonia.Media.IBrush?)Brushes.Blue;
+            if (sender is not Button clicked) return;
+            
+            clicked.Background = Brushes.Aquamarine;
         }
-
-
+        
     }
 }
