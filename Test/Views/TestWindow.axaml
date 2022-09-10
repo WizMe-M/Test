@@ -8,6 +8,6 @@
         Width="200" Height="200" CanResize="False"
         Title="TestWindow">
     <DockPanel>
-        <myControls:ClickPanel HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <myControls:ClickablePanel_UserControl HorizontalAlignment="Center" VerticalAlignment="Center" />
     </DockPanel>
 </Window>
